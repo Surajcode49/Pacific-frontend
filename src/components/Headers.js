@@ -25,10 +25,11 @@ const Headers = () => {
 
           <Nav className="Log">
             <NavLink
-              to="/register"
+              to="https://overseaspacific.com/"
               className="mt-3 mx-2 text-light text-decoration-none"
             >
-              Logout<IoMdLogOut />
+              Logout
+              <IoMdLogOut />
             </NavLink>
           </Nav>
         </Container>
