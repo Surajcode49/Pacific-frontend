@@ -24,13 +24,8 @@ const Headers = () => {
           </div>
 
           <Nav className="Log">
-            <NavLink
-              to="https://overseaspacific.com/"
-              className="mt-3 mx-2 text-light text-decoration-none"
-            >
-              Logout
-              <IoMdLogOut />
-            </NavLink>
+            <a href="https://overseaspacific.com">Logout</a>
+            <IoMdLogOut />
           </Nav>
         </Container>
       </Navbar>

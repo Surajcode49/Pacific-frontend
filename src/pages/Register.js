@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import { registerfunction } from '../services/Apis';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import '../styles/mix.css';
 
 const Register = () => {
@@ -93,7 +93,7 @@ const Register = () => {
             <button className="btn" onClick={handleSubmit}>
               Sign Up
             </button>
-            <p>Don't have an account </p>
+            <p> Already have an account ? <NavLink to ="/">Login</NavLink> </p>
           </form>
         </div>
         <ToastContainer />
