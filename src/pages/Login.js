@@ -12,9 +12,6 @@ const Login = () => {
     const [spiner,setSpiner] = useState(false);
 
     const navigate = useNavigate();
-
-
-
     // sendotp
     const sendOtp = async (e) => {
         e.preventDefault();

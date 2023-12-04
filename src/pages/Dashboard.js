@@ -28,10 +28,12 @@ const Dashboard = () => {
     userValid();
   }, [])
   return (
+    <>
+   
+   
     <div className="dash-main">
       <div className="dashboard-main-part">
         <nav className="dashboard-main-menu">
-          <img src={LogoImg} alt="" style={{ width: "12rem", height: "auto" }} />
           <h1>Pacific-overseas</h1>
           <ul>
             <li
@@ -191,7 +193,7 @@ const Dashboard = () => {
                 <i className="fa fa-bell nav-icon"></i>
                 <i className="fa fa-message nav-icon"></i>
               </div>
-              <h4>NowNow</h4>
+              <h4></h4>
               <img src="https://avatars.mds.yandex.net/i?id=74e88edd9e669820d0fe365c1bd7e85cf08efedf-8220915-images-thumbs&n=13" alt="user" />
             </div>
 
@@ -255,6 +257,7 @@ const Dashboard = () => {
         </section>
       </div>
     </div>
+  </>
   )
 }
 

@@ -16,6 +16,11 @@
   -o-user-select: none;
 }
 
+.imggg {
+  border-radius: 50%;
+  /* padding-right: 1rem; */
+}
+
 nav ul,
 nav ul li {
   outline: 0;
@@ -23,6 +28,15 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
+}
+
+.Log {
+  background-color: #116a68;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6vw;
+  border-radius: 10px;
 }
 
 .dash-main {
@@ -36,6 +50,11 @@ nav ul li a {
   background-size: cover;
   background: #212140;
 }
+
+
+
+/* navbar for the dashboard menus */
+
 
 /* MAIN MENU */
 
@@ -57,7 +76,7 @@ nav ul li a {
   background: rgb(73, 57, 113);
   padding-top: 10px;
   border-radius: 15px 0 0 15px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif
 }
 
 .dashboard-main-menu h1 {
