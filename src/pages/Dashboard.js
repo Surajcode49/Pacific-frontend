@@ -15,7 +15,7 @@ const Dashboard = () => {
   };
   const fetchName = async () => {
     const token = localStorage.getItem("userdbtoken");
-    const { data } = await axios.get("http://localhost:5000/user/token", {
+    const { data } = await axios.get("https://pacific-login3.onrender.com/", {
       headers: { Authorization: `Bearer ${token}` },
     });
     console.log(data);
