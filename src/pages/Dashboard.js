@@ -8,18 +8,19 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   const [activeNavItem, setActiveNavItem] = useState(0);
-  const [name, setName] = useState("");
+  const [name, setName] = useState("User");
 
   const handleNavItemClick = (index) => {
     setActiveNavItem(index);
   };
   const fetchName = async () => {
     const token = localStorage.getItem("userdbtoken");
-    const { data } = await axios.get("https://pacific-login3.onrender.com", {
+    const { data } = await axios.get("https://pacific-login3.onrender.com/user/token", {
       headers: { Authorization: `Bearer ${token}` },
     });
+    // console.log(token);
     console.log(data);
-    setName(data.name);
+    setName(data.name || "User");
   };
 
   const userValid = () => {
@@ -29,12 +30,13 @@ const Dashboard = () => {
     } else {
       navigate("*");
     }
+    // console.log(token);
   };
 
   useEffect(() => {
     userValid();
     fetchName();
-  }, []);
+  }, [name]);
   return (
     <>
       <div className="dash-main">
@@ -226,7 +228,7 @@ const Dashboard = () => {
                   <i className="fa fa-bell nav-icon"></i>
                   <i className="fa fa-message nav-icon"></i>
                 </div>
-                {name === "" ? <h4>User</h4> : <h4>{name}</h4>}
+                {name === null ? <h3>Loading...</h3> : <h3>{name}</h3>}
 
                 <img
                   src="https://avatars.mds.yandex.net/i?id=74e88edd9e669820d0fe365c1bd7e85cf08efedf-8220915-images-thumbs&n=13"
